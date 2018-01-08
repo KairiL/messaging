@@ -7,7 +7,7 @@ This program was designed on Ubuntu 16.04 using Python 3.5+, but should run on m
 To run the program use "Python3 ./Messaging.py".  You will be presented with a menu from which you can either message guests with a new or existing template, create a new template for later use, or view existing templates.  
   If you choose to message a guest you will be presented with a second menu from which you can choose to use an existing template or create a new template that you can choose to save or not. Whichever options you choose, you will be prompted to enter necessary information.  When messages are "sent" they will be printed to the screen.  After actions are taken you should return to the main menu.  Use ctr+C or option 5 at the main menu to exit
 
-  When writing templates you can use angle brackets to write <variableNames>.  Valid variable names include: timeOfDay, greeting, company, city, timezone, firstName, lastName, roomNumber, startTimestamp, and endTimestamp.
+  When writing templates you can use angle brackets to write \<variableNames\>.  Valid variable names include: timeOfDay, greeting, company, city, timezone, firstName, lastName, roomNumber, startTimestamp, and endTimestamp.
 
 
 ## Design
@@ -23,12 +23,12 @@ To run the program use "Python3 ./Messaging.py".  You will be presented with a m
   
   
 ## Potential Improvements
-  - Time zones could be used to modify <timeOfDay> and <greeting> given a default timezone to adjust from.  
+  - Time zones could be used to modify \<timeOfDay\> and \<greeting\> given a default timezone to adjust from.  
   - A pretty GUI.  
   - Templates are completely rewritten on every save, taking O(n+m) time.  If a VERY large number of templates was created this might need to be changed to a special type of append.
   - Deleting and re-ordering templates
   - Adding guests and companies through the menu
-  - An option to automatically replace missing <variable> fields.
-  - Checks for data read from file. e.g. check if <roomNumber> is an integer.  
+  - An option to automatically replace missing \<variable\> fields.
+  - Checks for data read from file. e.g. check if \<roomNumber\> is an integer.  
   - Automated tests
   - If a small number of templates is expected, a re-read/append method would allow for safer multi-user file saving.
